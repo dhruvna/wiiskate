@@ -1,0 +1,13 @@
+--cpu=Cortex-M4.fp.sp --branchpatch=sdcomp-29491-629360
+".\objects\adc.o"
+".\objects\main.o"
+".\objects\startup_stm32l476xx.o"
+".\objects\i2c.o"
+".\objects\sysclock.o"
+".\objects\uart.o"
+".\objects\uart_printf.o"
+".\objects\vesc.o"
+--strict --scatter ".\Objects\ProjectADC.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\ProjectADC.map" -o .\Objects\ProjectADC.axf

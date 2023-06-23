@@ -1,0 +1,101 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Dhruv Aggarwal, UCSB, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\dhruv\Desktop\School\3rd Year\ECE 153B\Project ADC\ProjectADC.uvprojx
+Project File Date:  03/21/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+src/main.c(9): warning: In file included from...
+src/stm32l476xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+src/main.c(39): warning: incompatible pointer types passing 'uint8_t (*)[2]' (aka 'unsigned char (*)[2]') to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wincompatible-pointer-types]
+        I2C_SendData(I2C1, n_addr_send, &n_init1, 2);
+                                        ^~~~~~~~
+src/I2C.h(14): note: passing argument to parameter 'pData' here
+int8_t I2C_SendData(I2C_TypeDef * I2Cx, uint8_t DeviceAddress, uint8_t *pData, uint8_t Size);
+                                                                        ^
+src/main.c(40): warning: incompatible pointer types passing 'uint8_t (*)[2]' (aka 'unsigned char (*)[2]') to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wincompatible-pointer-types]
+        I2C_SendData(I2C1, n_addr_send, &n_init2, 2);
+                                        ^~~~~~~~
+src/I2C.h(14): note: passing argument to parameter 'pData' here
+int8_t I2C_SendData(I2C_TypeDef * I2Cx, uint8_t DeviceAddress, uint8_t *pData, uint8_t Size);
+                                                                        ^
+src/main.c(45): warning: incompatible pointer types passing 'uint8_t (*)[6]' (aka 'unsigned char (*)[6]') to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wincompatible-pointer-types]
+                        I2C_ReceiveData(I2C1, n_addr_receive, &data, 6);
+                                                              ^~~~~
+src/I2C.h(15): note: passing argument to parameter 'pData' here
+int8_t I2C_ReceiveData(I2C_TypeDef * I2Cx, uint8_t DeviceAddress, uint8_t *pData, uint8_t Size);
+                                                                           ^
+src/main.c(46): warning: incompatible pointer types passing 'uint8_t (*)[2]' (aka 'unsigned char (*)[2]') to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wincompatible-pointer-types]
+                        I2C_SendData(I2C1, n_addr_receive, &n_done, 2);
+                                                           ^~~~~~~
+src/I2C.h(14): note: passing argument to parameter 'pData' here
+int8_t I2C_SendData(I2C_TypeDef * I2Cx, uint8_t DeviceAddress, uint8_t *pData, uint8_t Size);
+                                                                        ^
+src/main.c(48): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+                        int z = (data[5] >> 0) & 1;
+                            ^
+src/main.c(29): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        uint8_t n_init1[2] = {0xF0,0x55};
+                ^
+src/main.c(75): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+src/main.c(18): warning: unused variable 'debug' [-Wunused-variable]
+static int debug = 0;
+           ^
+9 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=10072 RO-data=1056 RW-data=0 ZI-data=1720  
+FromELF: creating hex file...
+".\Objects\ProjectADC.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32L4xx_DFP.2.6.1.pack
+                Keil.STM32L4xx_DFP.2.6.1
+                STMicroelectronics STM32L4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/dhruv/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/dhruv/AppData/Local/Arm/Packs/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
